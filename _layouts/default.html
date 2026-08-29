@@ -63,6 +63,18 @@
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         applyTheme(newTheme);
       }
+
+      // Update folder icon button
+      function toggleFolder(contentId, buttonElement) {
+        const content = document.getElementById(contentId);
+        if (content.style.display === 'none') {
+          content.style.display = 'flex';
+          buttonElement.setAttribute('aria-expanded', 'true');
+        } else {
+          content.style.display = 'none';
+          buttonElement.setAttribute('aria-expanded', 'false');
+        }
+    }
     </script>
   </head>
   <body>

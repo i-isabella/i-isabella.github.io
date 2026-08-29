@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- JavaScript to manage Dark/Light state -->
+    <script>
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        const btn = document.getElementById('theme-toggle-btn');
+        if (btn) btn.innerText = theme === 'light' ? '🌙 Dark Mode' : '☀️ Light Mode';
+      }
+
+      // Default to dark mode if no preference is saved yet
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+
+      window.addEventListener('DOMContentLoaded', () => {
+        applyTheme(savedTheme);
+      });
+
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        applyTheme(newTheme);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+        <p>{{ site.description }}</p>
+        
+        <!-- Interactive Theme Toggle Button -->
+        <button id="theme-toggle-btn" onclick="toggleTheme()" style="padding: 6px 12px; margin-top: 15px; cursor: pointer; border-radius: 4px; border: 1px solid #444; background: #222; color: #fff;">
+          🌙 Dark Mode
+        </button>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+  </body>
+</html>

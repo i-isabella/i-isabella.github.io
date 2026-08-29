@@ -1,0 +1,57 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* --- DARK MODE STYLES (The Default State) --- */
+:root[data-theme="dark"] {
+  body {
+    background-color: #1e1e24 !important;
+    color: #adbac7 !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #f0f6fc !important;
+  }
+  a {
+    color: #58a6ff !important;
+  }
+  pre, code {
+    background-color: #2d3139 !important;
+    color: #ff7b72 !important;
+    border: 1px solid #444c56 !important;
+  }
+  header p {
+    color: #8b949e !important;
+  }
+  #theme-toggle-btn {
+    background-color: #2d3139 !important;
+    color: #f0f6fc !important;
+    border-color: #444c56 !important;
+  }
+}
+
+/* --- LIGHT MODE STYLES --- */
+:root[data-theme="light"] {
+  body {
+    background-color: #ffffff !important;
+    color: #24292f !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #1f2328 !important;
+  }
+  a {
+    color: #0969da !important;
+  }
+  pre, code {
+    background-color: #f6f8fa !important;
+    color: #cf222e !important;
+    border: 1px solid #d0d7de !important;
+  }
+  header p {
+    color: #57606a !important;
+  }
+  #theme-toggle-btn {
+    background-color: #f6f8fa !important;
+    color: #24292f !important;
+    border-color: #d0d7de !important;
+  }
+}

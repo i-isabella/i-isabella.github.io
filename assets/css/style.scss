@@ -2,13 +2,17 @@
 ---
 @import "{{ site.theme }}";
 
+/* --- GLOBAL STYLES (Applies to all themes) --- */
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+
 /* --- DARK MODE STYLES (The Default State) --- */
 /* --- !important rule forces custom choice over the theme's default --- */
 :root[data-theme="dark"] {
   body {
     background-color: #1e1e24 !important;
     color: #adbac7 !important;
-    font-family: 'Roboto', sans-serif !important;
   }
   h1, h2, h3, h4, h5, h6 {
     color: #f0f6fc !important;

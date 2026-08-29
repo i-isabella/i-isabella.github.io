@@ -8,6 +8,53 @@ body {
   font-size: 18px !important; /* Adds a larger, highly readable base text size */
 }
 
+.folder-btn {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 18px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: all 0.2s ease;
+
+  /* Icon Swap Mechanics on Hover */
+  .folder-open { display: none; }
+  .folder-closed { display: inline-block; }
+
+  &:hover {
+    transform: translateX(4px); /* Moves folders forward slightly when targeted */
+    .folder-closed { display: none; }
+    .folder-open { display: inline-block; }
+  }
+}
+
+/* Dropdown Sub-File Items List Layout */
+.folder-sub-files {
+  padding-left: 30px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.file-link {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 16px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  width: max-content;
+  transition: opacity 0.2s ease;
+
+  &:hover { opacity: 0.8; }
+}
+
 /* --- DARK MODE STYLES (The Default State) --- */
 /* --- !important rule forces custom choice over the theme's default --- */
 :root[data-theme="dark"] {

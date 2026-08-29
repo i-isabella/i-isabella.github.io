@@ -81,6 +81,21 @@ body {
     color: #f0f6fc !important;
     border-color: #444c56 !important;
   }
+
+  .folder-btn {
+    background-color: #2d3139 !important;
+    color: #f0f6fc !important;
+    border: 1px solid #444c56 !important;
+    
+    /* SAFE FIX: Fills folder shapes solid with a nice accent blue */
+    svg { fill: #58a6ff; stroke: #2d3139; } 
+  }
+
+  .file-link {
+    color: #adbac7 !important;
+    /* SAFE FIX: Fills files solid with a clean steel grey */
+    svg { fill: #adbac7; stroke: #2d3139; } 
+  }
 }
 
 /* --- LIGHT MODE STYLES --- */
@@ -107,5 +122,20 @@ body {
     background-color: #f6f8fa !important;
     color: #24292f !important;
     border-color: #d0d7de !important;
+  }
+  
+  .folder-btn {
+    background-color: #f6f8fa !important;
+    color: #1f2328 !important;
+    border: 1px solid #d0d7de !important;
+    
+    /* SAFE FIX: Renders clean minimalist wireframes for folder icons */
+    svg { fill: none; stroke: #1f2328; } 
+  }
+
+  .file-link {
+    color: #57606a !important;
+    /* SAFE FIX: Renders minimalist wireframes for file icons */
+    svg { fill: none; stroke: #57606a; } 
   }
 }

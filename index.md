@@ -5,13 +5,13 @@ title: Welcome to My Portfolio
 
 <!-- MAIN INTRO CONTAINER (Disappears when folder opens) -->
 <div id="home-intro">
-  <img src="{{ site.baseurl }}/assets/images/profile.jpeg" alt="Anime-inspired female with glasses smiling" width="150" style="border-radius: 50%;">
+  <img src="{{ site.baseurl }}/assets/images/profile.jpeg" alt="Anime-inspired female with glasses smiling" style="width: 100%; max-width: 220px; height: auto; border-radius: 50%; display: block; margin-bottom: 20px;">
 
-  # Hello, I'm Isabella 👋
+  <h1>Hello, I'm Isabella 👋</h1>
 
-  Welcome to my virtual Consumer Electronics Documentation Portfolio! 
+  <p>Welcome to my virtual Consumer Electronics Documentation Portfolio!</p>
 
-  Click on the folder below to explore my work.
+  <p>Click on the folder below to explore my work.</p>
 </div>
 
 <!-- NEW IMAGE CONTAINER (Hidden by default, displays when folder opens) -->

@@ -9,12 +9,15 @@
     <link rel="preconnect" href="https://googleapis.com"> 
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+
+    <!-- Link Stylesheets & Icons -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
     
     <!-- JavaScript to manage Dark/Light state -->
     <script>
-      // Update the website's background colors and change the lightbulbs
+    // Update website colors, lightbulbs, and the home button icon
       function applyTheme(theme) {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
@@ -23,6 +26,10 @@
         const regularBulb = document.getElementById('regular-bulb');
         const btn = document.getElementById('theme-toggle-btn');
         
+        const solidHouse = document.querySelector('.solid-house');
+        const regularHouse = document.querySelector('.regular-house');
+        const homeBtn = document.getElementById('home-return-btn');
+        
         if (solidBulb && regularBulb) {
           if (theme === 'light') {
             // Light Mode Layout
@@ -30,9 +37,18 @@
             solidBulb.style.display = 'none';
             if (btn) {
               btn.setAttribute('aria-label', 'Switch to dark mode');
-              btn.style.background = '#fff';      // Makes button background white
-              btn.style.borderColor = '#ccc';     // Gives it a clean light border
-              regularBulb.setAttribute('stroke', '#000'); // Makes the bulb outline black!
+              btn.style.background = '#fff';
+              btn.style.borderColor = '#ccc';
+              regularBulb.setAttribute('stroke', '#000');
+            }
+            if (homeBtn) {
+              homeBtn.style.background = '#fff';
+              homeBtn.style.borderColor = '#ccc';
+            }
+            if (solidHouse && regularHouse) {
+              regularHouse.style.display = 'inline-block';
+              solidHouse.style.display = 'none';
+              regularHouse.style.color = '#000';
             }
           } else {
             // Dark Mode Layout
@@ -40,10 +56,19 @@
             regularBulb.style.display = 'none';
             if (btn) {
               btn.setAttribute('aria-label', 'Switch to light mode');
-              btn.style.background = '#111';      // Makes button background charcoal dark
-              btn.style.borderColor = '#444';     // Gives it a dark border
-              solidBulb.setAttribute('fill', '#FFD700');   // Yellow glow fill
-              solidBulb.setAttribute('stroke', '#FFD700'); // Yellow glow wireframe
+              btn.style.background = '#111';
+              btn.style.borderColor = '#444';
+              solidBulb.setAttribute('fill', '#FFD700');
+              solidBulb.setAttribute('stroke', '#FFD700');
+            }
+            if (homeBtn) {
+              homeBtn.style.background = '#111';
+              homeBtn.style.borderColor = '#444';
+            }
+            if (solidHouse && regularHouse) {
+              solidHouse.style.display = 'inline-block';
+              regularHouse.style.display = 'none';
+              solidHouse.style.color = '#FFD700'; // Matches glowing yellow accent
             }
           }
         }
@@ -51,64 +76,73 @@
 
       // Default to dark mode if no preference is saved yet
       const savedTheme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.setAttribute('data-theme', savedTheme);
-
-      window.addEventListener('DOMContentLoaded', () => {
-        applyTheme(savedTheme);
-      });
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      
+        window.addEventListener('DOMContentLoaded', () => {
+          applyTheme(savedTheme);
+        });
 
       // Update data-theme attribute
       function toggleTheme() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        applyTheme(newTheme);
-      }
+          const currentTheme = document.documentElement.getAttribute('data-theme');
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          applyTheme(newTheme);
+        }
 
-      // Update folder icon button and toggle homepage view
-      function toggleFolder(contentId, buttonElement) {
-        const content = document.getElementById(contentId);
-        const introSection = document.getElementById('home-intro');
-        const openedView = document.getElementById('folder-opened-view');
-        
-        // Find the specific closed and open icons inside the button that was clicked
-        const closedIcon = buttonElement.querySelector('.folder-closed');
-        const openIcon = buttonElement.querySelector('.folder-open');
-
-        // Check if folder is currently closed
-        const isClosed = content.style.display === 'none' || content.style.display === '';
-
-        if (isClosed) {
-          // 1. Open sub-files section
-          content.style.display = 'flex';
-          buttonElement.setAttribute('aria-expanded', 'true');
+        // Update folder icon button, toggle homepage view, and show/hide Home button
+        function toggleFolder(contentId, buttonElement) {
+          const content = document.getElementById(contentId);
+          const introSection = document.getElementById('home-intro');
+          const openedView = document.getElementById('folder-opened-view');
+          const homeBtn = document.getElementById('home-return-btn');
           
-          // 2. Hide homepage intro and show opened view image (if they exist on this page)
-          if (introSection) introSection.style.display = 'none';
-          if (openedView) openedView.style.display = 'block';
-
-          // 3. Swap folder icon states
-          if (closedIcon && openIcon) {
-            closedIcon.style.display = 'none';
-            openIcon.style.display = 'inline-block';
-          }
-        } else {
-          // 1. Close sub-files section
-          content.style.display = 'none';
-          buttonElement.setAttribute('aria-expanded', 'false');
-          
-          // 2. Restore homepage intro and hide opened view image
-          if (introSection) introSection.style.display = 'block';
-          if (openedView) openedView.style.display = 'none';
-
-          // 3. Swap folder icon states back
-          if (closedIcon && openIcon) {
-            closedIcon.style.display = 'inline-block';
-            openIcon.style.display = 'none';
+          const closedIcon = buttonElement.querySelector('.folder-closed');
+          const openIcon = buttonElement.querySelector('.folder-open');
+      
+          const isClosed = content.style.display === 'none' || content.style.display === '';
+      
+          if (isClosed) {
+            // Open folder view
+            content.style.display = 'flex';
+            buttonElement.setAttribute('aria-expanded', 'true');
+            
+            if (introSection) introSection.style.display = 'none';
+            if (openedView) openedView.style.display = 'block';
+            if (homeBtn) homeBtn.style.display = 'inline-flex'; // SHOW HOME BUTTON
+      
+            // Clean icon swap for Font Awesome
+            if (closedIcon && openIcon) {
+              closedIcon.style.display = 'none';
+              openIcon.style.display = 'inline-block';
+            }
+          } else {
+            // Close folder view
+            content.style.display = 'none';
+            buttonElement.setAttribute('aria-expanded', 'false');
+            
+            if (introSection) introSection.style.display = 'block';
+            if (openedView) openedView.style.display = 'none';
+            if (homeBtn) homeBtn.style.display = 'none'; // HIDE HOME BUTTON
+      
+            // Clean icon swap back
+            if (closedIcon && openIcon) {
+              closedIcon.style.display = 'inline-block';
+              openIcon.style.display = 'none';
+            }
           }
         }
-      }
+      
+        // Reset function when clicking the Home button
+        function resetToHome() {
+          const folderBtn = document.querySelector('.folder-btn');
+          const subFiles = document.getElementById('projects-content');
+          
+          // If folder is currently open, trigger the toggle to close it and reset view
+          if (subFiles && subFiles.style.display === 'flex') {
+            toggleFolder('projects-content', folderBtn);
+          }
+        }
     </script>
-    <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
   </head>
   <body>
     <div class="wrapper">
@@ -116,27 +150,36 @@
         <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
         <p>{{ site.description }}</p>
         
-        <!-- Fully Accessible Lightbulb Toggle Button -->
-        <button id="theme-toggle-btn" 
-                onclick="toggleTheme()" 
-                aria-label="Switch to dark mode" 
-                style="padding: 12px 18px; margin-top: 15px; cursor: pointer; border-radius: 6px; border: 1px solid #444; background: #222; display: inline-flex; align-items: center; justify-content: center;">
+        <!-- Container for buttons side-by-side -->
+        <div style="display: flex; gap: 10px; align-items: center; margin-top: 15px;">
           
-          <!-- Solid Glowing Lightbulb (Visible when Dark, to turn layout Light) -->
-          <svg id="solid-bulb" aria-hidden="true" focusable="false" xmlns="http://w3.org" width="26" height="26" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
-            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
-            <path d="M9 18h6"/><path d="M10 22h4"/>
-          </svg>
-        
-          <!-- Regular Outline Lightbulb (Visible when Light, to turn layout Dark) -->
-          <svg id="regular-bulb" aria-hidden="true" focusable="false" xmlns="http://w3.org" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
-            <path d="M9 18h6"/><path d="M10 22h4"/>
-          </svg>
-        
-        </button>
-
-      </header>
+          <!-- Lightbulb Toggle Button -->
+          <button id="theme-toggle-btn" 
+                  onclick="toggleTheme()" 
+                  aria-label="Switch to dark mode" 
+                  style="padding: 12px 18px; cursor: pointer; border-radius: 6px; border: 1px solid #444; background: #222; display: inline-flex; align-items: center; justify-content: center;">
+            <svg id="solid-bulb" aria-hidden="true" focusable="false" xmlns="http://w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#fff" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+              <path d="M9 18h6"/><path d="M10 22h4"/>
+            </svg>
+            <svg id="regular-bulb" aria-hidden="true" focusable="false" xmlns="http://w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+              <path d="M9 18h6"/><path d="M10 22h4"/>
+            </svg>
+          </button>
+      
+          <!-- NEW Contextual Home Button (Hidden by default, shown when folder opens) -->
+          <button id="home-return-btn" 
+                  onclick="resetToHome()" 
+                  aria-label="Return to homepage" 
+                  style="display: none; padding: 12px 16px; cursor: pointer; border-radius: 6px; border: 1px solid #444; background: #222; align-items: center; justify-content: center; font-size: 18px;">
+            <!-- Font Awesome Icons -->
+            <i class="fa-solid fa-house solid-house" style="display: none; color: #fff;"></i>
+            <i class="fa-regular fa-house regular-house" style="display: inline-block; color: #000;"></i>
+          </button>
+      
+        </div>
+    </header>
       <section>
         {{ content }}
       </section>

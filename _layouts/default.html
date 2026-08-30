@@ -64,17 +64,49 @@
         applyTheme(newTheme);
       }
 
-      // Update folder icon button
+      // Update folder icon button and toggle homepage view
       function toggleFolder(contentId, buttonElement) {
         const content = document.getElementById(contentId);
-        if (content.style.display === 'none') {
+        const introSection = document.getElementById('home-intro');
+        const openedView = document.getElementById('folder-opened-view');
+        
+        // Find the specific closed and open icons inside the button that was clicked
+        const closedIcon = buttonElement.querySelector('.folder-closed');
+        const openIcon = buttonElement.querySelector('.folder-open');
+
+        // Check if folder is currently closed
+        const isClosed = content.style.display === 'none' || content.style.display === '';
+
+        if (isClosed) {
+          // 1. Open sub-files section
           content.style.display = 'flex';
           buttonElement.setAttribute('aria-expanded', 'true');
+          
+          // 2. Hide homepage intro and show opened view image (if they exist on this page)
+          if (introSection) introSection.style.display = 'none';
+          if (openedView) openedView.style.display = 'block';
+
+          // 3. Swap folder icon states
+          if (closedIcon && openIcon) {
+            closedIcon.style.display = 'none';
+            openIcon.style.display = 'inline-block';
+          }
         } else {
+          // 1. Close sub-files section
           content.style.display = 'none';
           buttonElement.setAttribute('aria-expanded', 'false');
+          
+          // 2. Restore homepage intro and hide opened view image
+          if (introSection) introSection.style.display = 'block';
+          if (openedView) openedView.style.display = 'none';
+
+          // 3. Swap folder icon states back
+          if (closedIcon && openIcon) {
+            closedIcon.style.display = 'inline-block';
+            openIcon.style.display = 'none';
+          }
         }
-    }
+      }
     </script>
     <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
   </head>

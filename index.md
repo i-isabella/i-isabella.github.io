@@ -3,10 +3,11 @@ layout: default
 title: Welcome to My Portfolio
 ---
 
-# Hello, I'm Isabella 👋
 <img src="{{ site.baseurl }}/assets/images/profile.jpeg" alt="Anime-inspired female with glasses smiling" width="150" style="border-radius: 50%;">
 
-Welcome to my virtual desktop portfolio! 
+# Hello, I'm Isabella 👋
+
+Welcome to my virtual consumer electronics documentation portfolio! 
 
 Click on the folders below to explore my work.
 

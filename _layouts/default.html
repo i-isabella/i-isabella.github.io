@@ -19,61 +19,57 @@
     <script>
       // Update website colors, lightbulbs, and the home button icon
       function applyTheme(theme) {
-          document.documentElement.setAttribute('data-theme', theme);
-          localStorage.setItem('theme', theme);
-          
-          const solidBulb = document.getElementById('solid-bulb');
-          const regularBulb = document.getElementById('regular-bulb');
-          const btn = document.getElementById('theme-toggle-btn');
-          
-          const solidHouse = document.querySelector('.solid-house');
-          const regularHouse = document.querySelector('.regular-home');
-          const homeBtn = document.getElementById('home-return-btn');
-          
-          if (solidBulb && regularBulb) {
-            if (theme === 'light') {
-              // Light Mode Layout
-              regularBulb.style.display = 'inline-block';
-              solidBulb.style.display = 'none';
-              if (btn) {
-                btn.setAttribute('aria-label', 'Switch to dark mode');
-                btn.style.background = '#f0f0f0'; // Light grey background
-                btn.style.borderColor = '#ccc';
-                regularBulb.setAttribute('stroke', '#000');
-              }
-              if (homeBtn) {
-                homeBtn.style.background = '#f0f0f0'; // Light grey background
-                homeBtn.style.borderColor = '#ccc';
-              }
-              if (solidHouse && regularHouse) {
-                regularHouse.style.display = 'inline-block';
-                solidHouse.style.display = 'none';
-                regularHouse.style.color = '#000'; // Black outline icon
-              }
-            } else {
-              // Dark Mode Layout
-              solidBulb.style.display = 'inline-block';
-              regularBulb.style.display = 'none';
-              if (btn) {
-                btn.setAttribute('aria-label', 'Switch to light mode');
-                btn.style.background = '#222'; // Dark button background
-                btn.style.borderColor = '#444';
-                solidBulb.setAttribute('fill', '#FFD700');
-                solidBulb.setAttribute('stroke', '#FFD700');
-              }
-              if (homeBtn) {
-                homeBtn.style.background = '#222'; // Dark button background
-                homeBtn.style.borderColor = '#444';
-              }
-              if (solidHouse && regularHouse) {
-                solidHouse.style.display = 'inline-block';
-                regularHouse.style.display = 'none';
-                solidHouse.style.color = '#fff'; // Solid white fill version
-              }
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        const solidBulb = document.getElementById('solid-bulb');
+        const regularBulb = document.getElementById('regular-bulb');
+        const btn = document.getElementById('theme-toggle-btn');
+        
+        const homeBtn = document.getElementById('home-return-btn');
+        const homeIcon = document.getElementById('home-icon');
+        
+        if (solidBulb && regularBulb) {
+          if (theme === 'light') {
+            // Light Mode Layout
+            regularBulb.style.display = 'inline-block';
+            solidBulb.style.display = 'none';
+            if (btn) {
+              btn.setAttribute('aria-label', 'Switch to dark mode');
+              btn.style.background = '#f0f0f0';
+              btn.style.borderColor = '#ccc';
+              regularBulb.setAttribute('stroke', '#000');
+            }
+            if (homeBtn) {
+              homeBtn.style.background = '#f0f0f0';
+              homeBtn.style.borderColor = '#ccc';
+            }
+            if (homeIcon) {
+              homeIcon.style.color = '#000'; // Black outline look
+              homeIcon.style.fontWeight = '400'; // Makes it look like an outline/regular icon
+            }
+          } else {
+            // Dark Mode Layout
+            solidBulb.style.display = 'inline-block';
+            regularBulb.style.display = 'none';
+            if (btn) {
+              btn.setAttribute('aria-label', 'Switch to light mode');
+              btn.style.background = '#f0f0f0'; // Light grey background in dark mode too
+              btn.style.borderColor = '#444';
+              solidBulb.setAttribute('fill', '#FFD700');
+              solidBulb.setAttribute('stroke', '#FFD700');
+            }
+            if (homeBtn) {
+              homeBtn.style.background = '#f0f0f0'; // Light grey background
+              homeBtn.style.borderColor = '#444';
+            }
+            if (homeIcon) {
+              homeIcon.style.color = '#fff'; // Solid white fill
+              homeIcon.style.fontWeight = '900'; // Solid bold weight
             }
           }
         }
-
+      }   
       // Default to dark mode if no preference is saved yet
       const savedTheme = localStorage.getItem('theme') || 'dark';
         document.documentElement.setAttribute('data-theme', savedTheme);
@@ -168,14 +164,13 @@
             </svg>
           </button>
       
-          <!-- NEW Contextual Home Button (Hidden by default, shown when folder opens) -->
+          <!-- Contextual Home Button (Hidden by default, shown when folder opens) -->
           <button id="home-return-btn" 
                   onclick="resetToHome()" 
                   aria-label="Return to homepage" 
                   style="display: none; padding: 12px 16px; cursor: pointer; border-radius: 6px; border: 1px solid #ccc; background: #f0f0f0; align-items: center; justify-content: center; font-size: 18px;">
-            <!-- Font Awesome Icons (Using fa-home for reliable regular outline rendering) -->
-            <i class="fa-solid fa-house solid-house" style="display: none;"></i>
-            <i class="fa-regular fa-home regular-home" style="display: inline-block;"></i>
+            <!-- Single reliable Font Awesome house icon -->
+            <i id="home-icon" class="fa-solid fa-house"></i>
           </button>
       
         </div>

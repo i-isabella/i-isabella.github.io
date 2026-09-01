@@ -28,6 +28,12 @@
         
         const homeIcon = document.getElementById('regular-house');
         const homeBtn = document.getElementById('home-return-btn');
+
+        // ENFORCE: Ensure home button starts hidden on page load / theme switch 
+        // unless the folder is actively open. (We only want it hidden by default).
+        if (homeBtn && document.getElementById('projects-content').style.display !== 'flex') {
+          homeBtn.style.display = 'none';
+        }
         
         if (solidBulb && regularBulb) {
           if (theme === 'light') {

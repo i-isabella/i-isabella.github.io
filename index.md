@@ -35,12 +35,12 @@ title: Welcome to My Portfolio
   <!-- Hidden Sub-Files -->
   <div id="projects-content" class="folder-sub-files" style="display: none; flex-direction: column; gap: 8px; margin-top: 15px;">
     <!-- Link to Project One -->
-    <a href="/project_one.html" class="file-link" style="display: inline-flex; align-items: center; gap: 6px;">
+    <a href="{{ '/projects/project_one.html' | relative_url }}" class="file-link" style="display: inline-flex; align-items: center; gap: 6px;">
       <i class="fa-regular fa-file-lines file-icon"></i>
       project_one.html
     </a>
     <!-- Link to Project Two -->
-    <a href="/project_two.html" class="file-link" style="display: inline-flex; align-items: center; gap: 6px;">
+    <a href="#" class="file-link" style="display: inline-flex; align-items: center; gap: 6px;">
       <i class="fa-regular fa-file-lines file-icon"></i>
       project_two.html
     </a>

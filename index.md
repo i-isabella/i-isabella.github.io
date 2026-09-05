@@ -7,7 +7,7 @@ title: Welcome to My Portfolio
 <div id="home-intro">
   <img src="{{ site.baseurl }}/assets/images/profile.jpeg" alt="Anime-inspired female with glasses smiling" style="width: 100%; max-width: 220px; height: auto; border-radius: 50%; display: block; margin-bottom: 20px;">
 
-  <h1>Hello, I'm Name 👋</h1>
+  <h1>Hello, I'm Isabella 👋</h1>
 
   <p>Welcome to my virtual Consumer Electronics Documentation Portfolio!</p>
 

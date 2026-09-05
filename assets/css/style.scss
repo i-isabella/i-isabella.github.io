@@ -1,11 +1,19 @@
----
----
 @import "{{ site.theme }}";
 
 /* --- GLOBAL STYLES (Applies to all themes) --- */
 body {
   font-family: 'Roboto', sans-serif !important;
   font-size: 18px !important; /* Adds a larger, highly readable base text size */
+}
+
+#theme-toggle-btn, #home-return-btn {
+  padding: 12px 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
 }
 
 .folder-btn {
@@ -76,17 +84,19 @@ body {
   header p {
     color: #8b949e !important;
   }
-  #theme-toggle-btn {
+  
+  #theme-toggle-btn, #home-return-btn {
     background-color: #2d3139 !important;
-    color: #f0f6fc !important;
     border-color: #444c56 !important;
   }
+  
+  #theme-toggle-btn svg { stroke: #FFD700 !important; }
+  #home-return-btn svg { stroke: #f0f6fc !important; }
 
   .folder-btn {
     background-color: #2d3139 !important;
     color: #f0f6fc !important;
     border: 1px solid #444c56 !important;
-    
     /* SAFE FIX: Fills folder shapes solid with a nice accent blue */
     svg { fill: #58a6ff; stroke: #2d3139; } 
   }
@@ -118,17 +128,18 @@ body {
   header p {
     color: #57606a !important;
   }
-  #theme-toggle-btn {
+  
+  #theme-toggle-btn, #home-return-btn {
     background-color: #f6f8fa !important;
-    color: #24292f !important;
     border-color: #d0d7de !important;
   }
+  
+  #theme-toggle-btn svg, #home-return-btn svg { stroke: #1f2328 !important; }
   
   .folder-btn {
     background-color: #f6f8fa !important;
     color: #1f2328 !important;
     border: 1px solid #d0d7de !important;
-    
     /* SAFE FIX: Renders clean minimalist wireframes for folder icons */
     svg { fill: none; stroke: #1f2328; } 
   }

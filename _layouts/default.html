@@ -22,8 +22,9 @@
         
         const btn = document.getElementById('theme-toggle-btn');
         const homeBtn = document.getElementById('home-return-btn');
+        const projectsContent = document.getElementById('projects-content');
 
-        if (homeBtn && document.getElementById('projects-content').style.display !== 'flex') {
+        if (homeBtn && projectsContent && projectsContent.style.display !== 'flex') {
           homeBtn.style.display = 'none';
         }
         

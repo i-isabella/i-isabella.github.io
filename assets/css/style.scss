@@ -78,8 +78,8 @@ body {
   
   #theme-toggle-btn svg { stroke: #FFD700 !important; fill: none; }
   #home-return-btn svg { stroke: #f0f6fc !important; fill: none; }
-  .folder-btn svg { fill: #58a6ff; stroke: #2d3139; }
-  .file-link svg { fill: #adbac7; stroke: #2d3139; }
+  .folder-btn svg { fill: none; stroke: #58a6ff; }
+  .file-link svg { fill: none; stroke: #adbac7; }
 }
 
 /* --- LIGHT MODE STYLES --- */

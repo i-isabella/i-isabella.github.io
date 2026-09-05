@@ -24,10 +24,18 @@
         const homeBtn = document.getElementById('home-return-btn');
         const projectsContent = document.getElementById('projects-content');
 
-        if (homeBtn && projectsContent && projectsContent.style.display !== 'flex') {
-          homeBtn.style.display = 'none';
+        // Shows home button if we are on a sub-page OR if the folder is open
+        if (homeBtn) {
+          const isHomePage = projectsContent !== null;
+          const isFolderOpen = isHomePage && projectsContent.style.display === 'flex';
+          
+          if (!isHomePage || isFolderOpen) {
+            homeBtn.style.display = 'inline-flex';
+          } else {
+            homeBtn.style.display = 'none';
+          }
         }
-        
+       
         if (btn) {
           btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
         }

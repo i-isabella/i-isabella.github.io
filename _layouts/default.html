@@ -96,7 +96,7 @@
         const subFiles = document.getElementById('projects-content');
 
         // If folder is currently open, trigger the toggle to close it and reset view
-        if (subFiles && subFiles.style.display === 'flex') {
+        if (subFiles && subFiles.style.display === 'flex' && folderBtn) {
           toggleFolder('projects-content', folderBtn);
         }
       }
@@ -112,22 +112,16 @@
         <div style="display: flex; gap: 10px; align-items: center; margin-top: 15px;">
           
           <!-- Lightbulb Toggle Button -->
-          <button id="theme-toggle-btn" 
-                  onclick="toggleTheme()" 
-                  aria-label="Switch to dark mode">
-            <svg id="regular-bulb" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block;">
+          <button id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Switch to dark mode">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
               <path d="M9 18h6"/><path d="M10 22h4"/>
             </svg>
           </button>
       
           <!-- Contextual Home Button (Hidden by default, shown when folder opens) -->
-          <button id="home-return-btn" 
-                  onclick="resetToHome()" 
-                  aria-label="Return to homepage" 
-                  style="display: none;">
-            <!-- Regular Outline House SVG For Home Icon -->
-            <svg id="regular-house" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline-block;">
+          <button id="home-return-btn" onclick="resetToHome()" aria-label="Return to homepage" style="display: none;">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
               <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
             </svg>

@@ -104,12 +104,16 @@
       function resetToHome() {
         const folderBtn = document.querySelector('.folder-btn');
         const subFiles = document.getElementById('projects-content');
-
-        // If folder is currently open, trigger the toggle to close it and reset view
+        
+        // If the folder elements exist and the folder is open, close it (Homepage behavior)
         if (subFiles && subFiles.style.display === 'flex' && folderBtn) {
           toggleFolder('projects-content', folderBtn);
+        } else {
+          // Otherwise, we are on a sub-page, so navigate back to the home URL
+          window.location.href = "{{ '/' | relative_url }}";
         }
       }
+      
     </script>
   </head>
   <body>

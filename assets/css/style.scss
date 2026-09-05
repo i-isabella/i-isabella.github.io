@@ -1,3 +1,5 @@
+---
+---
 @import "{{ site.theme }}";
 
 /* --- GLOBAL STYLES (Applies to all themes) --- */
@@ -6,37 +8,20 @@ body {
   font-size: 18px !important; /* Adds a larger, highly readable base text size */
 }
 
-#theme-toggle-btn, #home-return-btn {
-  padding: 12px 18px;
-  cursor: pointer;
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-}
-
-.folder-btn {
+/* Button Base Styles */
+#theme-toggle-btn, #home-return-btn, .folder-btn {
   font-family: 'Roboto', sans-serif !important;
-  font-size: 18px !important;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 12px 20px;
+  font-size: 16px !important;
+  padding: 10px 16px;
   cursor: pointer;
   border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-weight: 700;
-  transition: all 0.2s ease;
-
-  /* Icon Swap Mechanics on Hover */
-  .folder-open { display: none; }
-  .folder-closed { display: inline-block; }
-
-  &:hover {
-    transform: translateX(4px); /* Moves folders forward slightly when targeted */
-    .folder-closed { display: none; }
-    .folder-open { display: inline-block; }
-  }
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 /* Dropdown Sub-File Items List Layout */
@@ -65,7 +50,7 @@ body {
 
 /* --- DARK MODE STYLES (The Default State) --- */
 /* --- !important rule forces custom choice over the theme's default --- */
-:root[data-theme="dark"] {
+:root[data-theme="dark"], :root:not([data-theme]) {
   body {
     background-color: #1e1e24 !important;
     color: #adbac7 !important;
@@ -85,27 +70,16 @@ body {
     color: #8b949e !important;
   }
   
-  #theme-toggle-btn, #home-return-btn {
+#theme-toggle-btn, #home-return-btn, .folder-btn {
     background-color: #2d3139 !important;
+    color: #f0f6fc !important;
     border-color: #444c56 !important;
   }
   
-  #theme-toggle-btn svg { stroke: #FFD700 !important; }
-  #home-return-btn svg { stroke: #f0f6fc !important; }
-
-  .folder-btn {
-    background-color: #2d3139 !important;
-    color: #f0f6fc !important;
-    border: 1px solid #444c56 !important;
-    /* SAFE FIX: Fills folder shapes solid with a nice accent blue */
-    svg { fill: #58a6ff; stroke: #2d3139; } 
-  }
-
-  .file-link {
-    color: #adbac7 !important;
-    /* SAFE FIX: Fills files solid with a clean steel grey */
-    svg { fill: #adbac7; stroke: #2d3139; } 
-  }
+  #theme-toggle-btn svg { stroke: #FFD700 !important; fill: none; }
+  #home-return-btn svg { stroke: #f0f6fc !important; fill: none; }
+  .folder-btn svg { fill: #58a6ff; stroke: #2d3139; }
+  .file-link svg { fill: #adbac7; stroke: #2d3139; }
 }
 
 /* --- LIGHT MODE STYLES --- */
@@ -129,24 +103,13 @@ body {
     color: #57606a !important;
   }
   
-  #theme-toggle-btn, #home-return-btn {
+  #theme-toggle-btn, #home-return-btn, .folder-btn {
     background-color: #f6f8fa !important;
+    color: #1f2328 !important;
     border-color: #d0d7de !important;
   }
   
-  #theme-toggle-btn svg, #home-return-btn svg { stroke: #1f2328 !important; }
-  
-  .folder-btn {
-    background-color: #f6f8fa !important;
-    color: #1f2328 !important;
-    border: 1px solid #d0d7de !important;
-    /* SAFE FIX: Renders clean minimalist wireframes for folder icons */
-    svg { fill: none; stroke: #1f2328; } 
-  }
-
-  .file-link {
-    color: #57606a !important;
-    /* SAFE FIX: Renders minimalist wireframes for file icons */
-    svg { fill: none; stroke: #57606a; } 
-  }
+  #theme-toggle-btn svg, #home-return-btn svg { stroke: #1f2328 !important; fill: none; }
+  .folder-btn svg { fill: none; stroke: #1f2328; }
+  .file-link svg { fill: none; stroke: #57606a; }
 }

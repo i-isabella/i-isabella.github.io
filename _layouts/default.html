@@ -43,7 +43,7 @@
 
       // Update data-theme attribute
       function toggleTheme() {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
         const newTheme = currentTheme === 'light' ? 'dark' : 'light';
         applyTheme(newTheme);
       }
@@ -58,6 +58,7 @@
         const closedIcon = buttonElement.querySelector('.folder-closed');
         const openIcon = buttonElement.querySelector('.folder-open');
       
+        if (!content) return;
         const isClosed = content.style.display === 'none' || content.style.display === '';
       
         if (isClosed) {

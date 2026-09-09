@@ -1,0 +1,115 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* --- GLOBAL STYLES (Applies to all themes) --- */
+body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 18px !important; /* Adds a larger, highly readable base text size */
+}
+
+/* Button Base Styles */
+#theme-toggle-btn, #home-return-btn, .folder-btn {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 16px !important;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  border-width: 1px;
+  border-style: solid;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Dropdown Sub-File Items List Layout */
+.folder-sub-files {
+  padding-left: 30px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.file-link {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 16px !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  padding: 6px 12px;
+  border-radius: 4px;
+  width: max-content;
+  transition: opacity 0.2s ease;
+
+  &:hover { opacity: 0.8; }
+}
+
+/* --- DARK MODE STYLES (The Default State) --- */
+/* --- !important rule forces custom choice over the theme's default --- */
+:root[data-theme="dark"], :root:not([data-theme]) {
+  body {
+    background-color: #1e1e24 !important;
+    color: #adbac7 !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #f0f6fc !important;
+  }
+  a {
+    color: #58a6ff !important;
+  }
+  pre, code {
+    background-color: #2d3139 !important;
+    color: #ff7b72 !important;
+    border: 1px solid #444c56 !important;
+  }
+  header p {
+    color: #8b949e !important;
+  }
+  
+#theme-toggle-btn, #home-return-btn, .folder-btn {
+    background-color: #2d3139 !important;
+    color: #f0f6fc !important;
+    border-color: #444c56 !important;
+  }
+  
+  #theme-toggle-btn svg { stroke: #FFD700 !important; fill: none; }
+  #home-return-btn svg { stroke: #f0f6fc !important; fill: none; }
+  .folder-btn svg { fill: none; stroke: #58a6ff; }
+  .file-link svg { fill: none; stroke: #adbac7; }
+}
+
+/* --- LIGHT MODE STYLES --- */
+:root[data-theme="light"] {
+  body {
+    background-color: #ffffff !important;
+    color: #24292f !important;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: #1f2328 !important;
+  }
+  a {
+    color: #0969da !important;
+  }
+  pre, code {
+    background-color: #f6f8fa !important;
+    color: #cf222e !important;
+    border: 1px solid #d0d7de !important;
+  }
+  header p {
+    color: #57606a !important;
+  }
+  
+  #theme-toggle-btn, #home-return-btn, .folder-btn {
+    background-color: #f6f8fa !important;
+    color: #1f2328 !important;
+    border-color: #d0d7de !important;
+  }
+  
+  #theme-toggle-btn svg, #home-return-btn svg { stroke: #1f2328 !important; fill: none; }
+  .folder-btn svg { fill: none; stroke: #1f2328; }
+  .file-link svg { fill: none; stroke: #57606a; }
+}

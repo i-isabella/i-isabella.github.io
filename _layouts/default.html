@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    
+    <!-- Ask Google for Roboto font -->
+    <link rel="preconnect" href="https://googleapis.com"> 
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Link Stylesheets -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/assets/images/favicon.png">
+    
+    <!-- JavaScript to manage Dark/Light state -->
+    <script>
+      function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        const btn = document.getElementById('theme-toggle-btn');
+        const homeBtn = document.getElementById('home-return-btn');
+        const projectsContent = document.getElementById('projects-content');
+
+        // Shows home button if we are on a sub-page OR if the folder is open
+        if (homeBtn) {
+          const isHomePage = projectsContent !== null;
+          const isFolderOpen = isHomePage && projectsContent.style.display === 'flex';
+          
+          if (!isHomePage || isFolderOpen) {
+            homeBtn.style.display = 'inline-flex';
+          } else {
+            homeBtn.style.display = 'none';
+          }
+        }
+       
+        if (btn) {
+          btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+        }
+      }
+
+      // Default to dark mode if no preference is saved yet
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    
+      window.addEventListener('DOMContentLoaded', () => {
+        applyTheme(savedTheme);
+      });
+
+      // Update data-theme attribute
+      function toggleTheme() {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        applyTheme(newTheme);
+      }
+
+      // Update folder icon button, toggle homepage view, and show/hide Home button
+      function toggleFolder(contentId, buttonElement) {
+        const content = document.getElementById(contentId);
+        const introSection = document.getElementById('home-intro');
+        const openedView = document.getElementById('folder-opened-view');
+        const homeBtn = document.getElementById('home-return-btn');
+        
+        const closedIcon = buttonElement.querySelector('.folder-closed');
+        const openIcon = buttonElement.querySelector('.folder-open');
+      
+        if (!content) return;
+        const isClosed = content.style.display === 'none' || content.style.display === '';
+      
+        if (isClosed) {
+          // Open folder view
+          content.style.display = 'flex';
+          buttonElement.setAttribute('aria-expanded', 'true');
+          
+          if (introSection) introSection.style.display = 'none';
+          if (openedView) openedView.style.display = 'block';
+          if (homeBtn) homeBtn.style.display = 'inline-flex'; // SHOW HOME BUTTON
+
+          // Clean icon swap for Font Awesome
+          if (closedIcon && openIcon) {
+            closedIcon.style.display = 'none';
+            openIcon.style.display = 'inline-block';
+          }
+        } else {
+          // Close folder view
+          content.style.display = 'none';
+          buttonElement.setAttribute('aria-expanded', 'false');
+          
+          if (introSection) introSection.style.display = 'block';
+          if (openedView) openedView.style.display = 'none';
+          if (homeBtn) homeBtn.style.display = 'none'; // HIDE HOME BUTTON
+
+          // Clean icon swap back
+          if (closedIcon && openIcon) {
+            closedIcon.style.display = 'inline-block';
+            openIcon.style.display = 'none';
+          }
+        }
+      }
+
+      // Reset function when clicking the Home button
+      function resetToHome() {
+        const folderBtn = document.querySelector('.folder-btn');
+        const subFiles = document.getElementById('projects-content');
+        
+        // If the folder elements exist and the folder is open, close it (Homepage behavior)
+        if (subFiles && subFiles.style.display === 'flex' && folderBtn) {
+          toggleFolder('projects-content', folderBtn);
+        } else {
+          // Otherwise, we are on a sub-page, so navigate back to the home URL
+          window.location.href = "{{ '/' | relative_url }}";
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+        <p>{{ site.description }}</p>
+        
+        <!-- Container for buttons side-by-side -->
+        <div style="display: flex; gap: 10px; align-items: center; margin-top: 15px;">
+          
+          <!-- Lightbulb Toggle Button -->
+          <button id="theme-toggle-btn" onclick="toggleTheme()" aria-label="Switch to dark mode">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .6 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/>
+              <path d="M9 18h6"/><path d="M10 22h4"/>
+            </svg>
+          </button>
+      
+          <!-- Contextual Home Button (Hidden by default, shown when folder opens) -->
+          <button id="home-return-btn" onclick="resetToHome()" aria-label="Return to homepage" style="display: none;">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+              <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+          </button>
+      
+        </div>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+  </body>
+</html>

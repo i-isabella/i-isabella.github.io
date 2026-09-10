@@ -38,7 +38,7 @@ title: Welcome to My Portfolio
 
   <!-- Hidden Sub-Files -->
   <div id="projects-content" class="folder-sub-files" style="display: none;">
-    <a href="{{ '/projects/project_one.html' | relative_url }}" class="file-link">
+    <a href="{{ '/projects/logitech-k380.html' | relative_url }}" class="file-link">
       <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
         <polyline points="14 2 14 8 20 8"/>
@@ -46,7 +46,7 @@ title: Welcome to My Portfolio
         <line x1="16" y1="17" x2="8" y2="17"/>
         <line x1="10" y1="9" x2="8" y2="9"/>
       </svg>
-      First Project
+      How to Pair Logi K380
     </a>
     <a href="{{ '/projects/project_one.html' | relative_url }}" class="file-link">
       <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

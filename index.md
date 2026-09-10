@@ -46,7 +46,7 @@ title: Welcome to My Portfolio
         <line x1="16" y1="17" x2="8" y2="17"/>
         <line x1="10" y1="9" x2="8" y2="9"/>
       </svg>
-      [Logi K380 Pairing Guide](/projects/connect-logi-k380-mac-ipad.md)
+      [Logi K380 Pairing Guide](/logitech-k380.html)
     </a>
     <a href="#" class="file-link">
       <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

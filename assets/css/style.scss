@@ -48,6 +48,15 @@ body {
   &:hover { opacity: 0.8; }
 }
 
+/* Make projects images adapt automatically to users device screen size */
+.projects-content img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 20px auto;
+  border-radius: 6px; /* Add subtle rounded corners to images */
+}
+
 /* --- DARK MODE STYLES (The Default State) --- */
 /* --- !important rule forces custom choice over the theme's default --- */
 :root[data-theme="dark"], :root:not([data-theme]) {

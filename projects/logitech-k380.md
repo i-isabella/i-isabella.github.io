@@ -10,12 +10,29 @@ You don’t need previous experience pairing Bluetooth devices.
 
 You will only need to follow this procedure once. Next time you turn on your keyboard, it will connect automatically. 
 
-1. On your Apple device, go to **System Settings** — also known as the wheel icon.
-2. Select the **Bluetooth** menu.
-3. Make sure that **Bluetooth** is on.
-4. Slide up the button on the upper left side of your K380 keyboard. A green light will turn on and then immediately off.
-5. Press one of the three Bluetooth icons on the upper left of your keyboard for a few seconds until the white light above it starts blinking fast.
-6. Your keyboard will appear on the **Nearby Devices** option under the same **Bluetooth** menu you opened, like this:
-7. Select **Keyboard K380** and click the **Connect** button.
+## On your Mac or iPad
 
-Your keyboard is now connected. It will now appear under **My Devices**.
+1. Go to **System Settings** (the gear icon). ![Apple System Settings Icon](/assets/images/logi-keyb/apple-sys-settings.png)
+   
+2. Select the **Bluetooth** menu. ![Apple Bluetooth Menu](/assets/images/logi-keyb/bt-menu.png)
+   
+3. Make sure that **Bluetooth** is on. ![Bluetooth Option On](/assets/images/logi-keyb/bt-on.png)
+   
+## On your Logi K380 keyboard
+
+4. Place 2 AAA batteries inside the compartment on the back on your keyboard.
+   
+5. Turn on your keyboard: 
+   * Slide up the button on the upper left side.
+   * A green indicator light will flash briefly.
+   ![Keyboard's button slid up](/assets/images/logi-keyb/keyb-on.jpg)
+     
+6. Press any of the keys with a Bluetooth icon for a few seconds, a white indicator light will start blinking. ![Bluetooth keys on keyboard](/assets/images/logi-keyb/bt-keys.jpg)
+
+## Back to your Mac or iPad
+
+7. Your keyboard will appear on the list of **Nearby Devices** under the same **Bluetooth** menu you opened, like this: ![Nearby Devices List](/assets/images/logi-keyb/keyb-nearby-dev.png)
+    
+8. Select **Keyboard K380** and click the **Connect** button.
+
+9. You connected your keyboard successfully, it now appears on **My Devices**. ![Keyboard on My Devices List](/assets/images/logi-keyb/keyb-my-dev.png)

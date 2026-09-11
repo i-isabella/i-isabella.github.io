@@ -6,7 +6,7 @@ title: How to Disconnect the Logitech K380 Keyboard from a Mac or iPad
 
 This guide will help you unpair your Logi K380 keyboard from your Mac or iPad. Unpairing is the procedure your Apple device will use to disconnect and forget your Bluetooth keyboard.
 
-If you do this, and later need to use your keyboard again, you will need to follow the [pairing procedure]({% raw %}{{ '/projects/logitech-k380.html' | relative_url }}{% endraw %}) again. Before following the next steps, make sure this is what you want to do, so you can avoid extra work.
+If you do this, and later need to use your keyboard again, you will need to follow the [pairing procedure]('/projects/logitech-k380.html') again. Before following the next steps, make sure this is what you want to do, so you can avoid extra work.
 
 ### On your Mac or iPad
 
@@ -28,7 +28,7 @@ If you do this, and later need to use your keyboard again, you will need to foll
   
 5.  Press the **Forget This Device…** button.
 
-   ![Forget This Device button](assets/images/logi-keyb/forget-keyb.png)
+   ![Forget This Device button](/assets/images/logi-keyb/forget-keyb.png)
    
 6.  Choose **Forget Device** when you’re warned to make sure that you want to unpair.
 

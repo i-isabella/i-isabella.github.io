@@ -4,7 +4,7 @@ title: How to Connect the Logitech K380 Keyboard to a Mac or iPad
 ---
 # How to Connect the Logitech K380 Keyboard to a Mac or iPad
 
-This guide will help you connect your Logi K380 Bluetooth keyboard to your Mac or iPad. This process is called pairing. 
+This guide will help you _connect_ your Logi K380 Bluetooth keyboard to your Apple device. This process is called _pairing_. 
 
 You don’t need previous experience pairing Bluetooth devices. 
 
@@ -20,32 +20,35 @@ You will only need to follow this procedure once. Next time you turn on your key
    
    ![Apple Bluetooth Menu](/assets/images/logi-keyb/bt-menu.png)
    
-3. Make sure that **Bluetooth** is on.
+3. Make sure **Bluetooth** is on.
    
    ![Bluetooth Option On](/assets/images/logi-keyb/bt-on.png)
    
 ### On your Logi K380 keyboard
 
-4. Place 2 AAA batteries inside the compartment on the back on your keyboard.
+1. Place 2 AAA batteries inside the compartment on the back of your keyboard.
    
-5. Turn on your keyboard:
+2. Turn on your keyboard:
    * Slide up the button on the upper left side.
    * A green indicator light will flash briefly.
 
    ![Keyboard's button slid up](/assets/images/logi-keyb/keyb-on.jpg)
      
-6. Press any of the keys with a Bluetooth icon for a few seconds, a white indicator light will start blinking.
+3. Press any of the keys with a Bluetooth icon for a few seconds, a white indicator light will start blinking. TIP: If you plan to use your keyboard with multiple devices, use a different Bluetooth key for each device.
    
    ![Bluetooth keys on keyboard](/assets/images/logi-keyb/bt-keys.jpg)
 
 ### Back to your Mac or iPad
 
-7. Your keyboard will appear on the list of **Nearby Devices** under the same **Bluetooth** menu you opened, like this:
+1. Your keyboard will appear on the list of **Nearby Devices** under the same **Bluetooth** menu you opened, like this:
    
    ![Nearby Devices List](/assets/images/logi-keyb/keyb-nearby-dev.png)
     
-8. Select **Keyboard K380** and click the **Connect** button.
+2. Select **Keyboard K380** and click the **Connect** button.
 
-9. You connected your keyboard successfully, it now appears on **My Devices**.
+3. You connected your keyboard successfully, it now appears on **My Devices**.
 
    ![Keyboard on My Devices List](/assets/images/logi-keyb/keyb-my-dev.png)
+
+
+NOTE: Your Apple device will remember and reconnect to your K380 keyboard automatically when both of them are turned on. If you no longer want them to be linked, you will need to follow the [unparing procedure]({{ '/projects/disconnect-logi-k380.html' | relative_url }}) to _disconnect and forget_ your keyboard.

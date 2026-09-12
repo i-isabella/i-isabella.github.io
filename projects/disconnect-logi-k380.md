@@ -22,20 +22,20 @@ If you do this, and later need to use your keyboard again, you will need to foll
    
    ![Bluetooth Option On](/assets/images/logi-keyb/bt-on.png)
    
-4.  Press the ⓘ symbol on the right of **Keyboard K380** listed under **My Devices**.
+4. Press the ⓘ symbol on the right of **Keyboard K380** listed under **My Devices**.
 
-  ![Circled "i" symbol next to keyboard on Devices list](/assets/images/logi-keyb/bt-my-keyb-dev.png)
+   ![Circled "i" symbol next to keyboard on Devices list](/assets/images/logi-keyb/bt-my-keyb-dev.png)
+   
+5. Press the **Forget This Device…** button.
   
-5.  Press the **Forget This Device…** button.
-
    ![Forget This Device button](/assets/images/logi-keyb/forget-keyb.png)
    
-6.  Choose **Forget Device** when you’re warned to make sure that you want to unpair.
+6. Choose **Forget Device** when you’re warned to make sure that you want to unpair.
 
    ![Forget Bluetooth device](/assets/images/logi-keyb/forget-keyb-bt.png)
    
-7.  If your keyboard is currently turned on, the 3 indicator lights on the top of the Bluetooth keys will flash briefly.
+7. If your keyboard is currently turned on, the 3 indicator lights on the top of the Bluetooth keys will flash briefly.
 
    ![Keyboard lights circled](/assets/images/logi-keyb/bt-keys-lights.jpg)
    
-8.  Your keyboard is now unpaired.
+8. Your keyboard is now unpaired.

@@ -51,4 +51,4 @@ Sólo necesita seguir este procedimiento una vez. La siguiente ocasión que enci
    ![Teclado en Lista de Mis Dispositivos](/assets/images/logi-keyb/keyb-my-dev.png)
 
 
-NOTA: Su dispositivo Apple recordará y se conectará a su teclado K380 automáticamente cuando ambos estén encendidos. Si decide que ya no quiere que estén ligados, necesitará seguir el [procedimiento para desvincular]({{ '/projects/disconnect-logi-k380-es.html' | relative_url }}) para _desconectar y olvidar_ su teclado.
+NOTA: Su dispositivo Apple recordará y se conectará a su teclado K380 automáticamente cuando ambos estén encendidos. Si después decide que quiere _desconectar y olvidar_ su teclado, necesitará seguir el [procedimiento para desvincular]({{ '/projects/disconnect-logi-k380-es.html' | relative_url }}).

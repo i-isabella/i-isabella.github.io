@@ -10,7 +10,7 @@ If you need to use your keyboard after, you will need to follow the [pairing pro
 
 ### On your Mac or iPad
 
-1. Go to **System Settings** or **Settings** (gear icon).
+1. Go to **System Settings** / **Settings** (gear icon).
    
    ![Apple System Settings Icon](/assets/images/logi-keyb/apple-sys-settings.png)
    

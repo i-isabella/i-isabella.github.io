@@ -10,29 +10,29 @@ Si necesita usar su teclado después, necesitará seguir el [proceso de vinculac
 
 ### En su Mac o iPad
 
-1. Abra **Configuración** (ícono de engranaje).
+1. Abra **Configuración del Sistema**/**Configuración** (ícono de engranaje).
    
-   ![Ícono de Configuración de Apple](/assets/images/logi-keyb/apple-sys-settings.png)
+   ![Ícono de Configuración de Apple](/assets/images/logi-keyb/es-apple-sys-settings.png)
    
 2. Seleccione el menú **Bluetooth**.
    
-   ![Menú Bluetooth de Apple](/assets/images/logi-keyb/bt-menu.png)
+   ![Menú Bluetooth de Apple](/assets/images/logi-keyb/es-bt-menu.png)
    
 3. Asegúrese que **Bluetooth** esté Encendido.
    
-   ![Bluetooth Encendido](/assets/images/logi-keyb/bt-on.png)
+   ![Bluetooth Encendido](/assets/images/logi-keyb/es-bt-on.png)
    
-4. Presione el símbolo ⓘ que se encuentra a la derecha de **Keyboard K380** en la lista de **Mis Dispositivos**.
+4. Presione el símbolo ⓘ que se encuentra a la derecha de **Keyboard K380** en la lista de **Mis dispositivos**.
 
-   ![Símbolo de "i" encerrado en un círculo a un lado del teclado en la lista de Dispositivos](/assets/images/logi-keyb/bt-my-keyb-dev.png)
+   ![Símbolo de "i" encerrado en un círculo a un lado del teclado en la lista de dispositivos](/assets/images/logi-keyb/es-bt-my-keyb-dev.png)
    
-5. Presione el botón **Olvidar Dispositivo…**.
+5. Presione el botón **Olvidar este dispositivo...**.
   
-   ![Botón Olvidar Dispositivo](/assets/images/logi-keyb/forget-keyb.png)
+   ![Botón Olvidar este dispositivo](/assets/images/logi-keyb/es-forget-keyb.png)
    
-6. Elija **Olvidar Dispositivo** cuando aparezca la siguiente advertencia.
+6. Elija **Olvidar dispositivo** cuando aparezca la siguiente advertencia.
 
-   ![Advertencia Olvidar dispositivo Bluetooth](/assets/images/logi-keyb/forget-keyb-bt.png)
+   ![Advertencia Olvidar dispositivo Bluetooth](/assets/images/logi-keyb/es-forget-keyb-bt.png)
    
 7. Si su teclado se encuentra encendido, las tres luces superiores a las teclas que tienen el ícono de Bluetooth parpadearán momentáneamente.
 

@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Cómo Desvincular el Teclado Logitech K380 de su Mac o iPad
+title: Cómo Desconectar el Teclado Logitech K380 de su Mac o iPad
 ---
-# Cómo Desvincular el Teclado Logitech K380 de su Mac o iPad
+# Cómo Desconectar el Teclado Logitech K380 de su Mac o iPad
 
-Esta guía le ayudará a _desconectar y olvidar_ su teclado Bluetooth Logi K380 de su dispositivo Apple. Esta acción se llama _desvincular_.
+Esta guía le ayudará a _desconectar y olvidar_ su teclado Bluetooth Logi K380 de su dispositivo Apple.
 
-Si necesita usar su teclado después, necesitará seguir el [proceso de vinculación]({{ '/projects/logitech-k380-es.html' | relative_url }}) para conectar su teclado de nuevo. 
+Si necesita usar su teclado después, necesitará seguir el proceso para [conectar su teclado]({{ '/projects/logitech-k380-es.html' | relative_url }}) de nuevo. 
 
 ### En su Mac o iPad
 
@@ -38,5 +38,5 @@ Si necesita usar su teclado después, necesitará seguir el [proceso de vinculac
 
    ![Luces del teclado encerradas en un círculo.](/assets/images/logi-keyb/bt-keys-lights.jpg)
    
-8. Su teclado está desvinculado.
+8. Su teclado está desconectado.
    

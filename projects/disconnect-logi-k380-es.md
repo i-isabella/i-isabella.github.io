@@ -10,7 +10,7 @@ Si necesita usar su teclado después, necesitará seguir el [proceso de vinculac
 
 ### En su Mac o iPad
 
-1. Abra **Configuración del Sistema**/**Configuración** (ícono de engranaje).
+1. Abra **Configuración del Sistema** o **Configuración** (ícono de engranaje).
    
    ![Ícono de Configuración de Apple](/assets/images/logi-keyb/es-apple-sys-settings.png)
    

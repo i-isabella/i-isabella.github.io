@@ -1,12 +1,12 @@
 ---
 layout: default
-title: Cómo Vincular el Teclado Logitech K380 a su Mac o iPad
+title: Cómo Conectar el Teclado Logitech K380 a su Mac o iPad
 ---
-# Cómo Vincular el Teclado Logitech K380 a su Mac o iPad
+# Cómo Conectar el Teclado Logitech K380 a su Mac o iPad
 
-Esta guía le ayudará a _conectar_ su teclado Bluetooth Logi K380 a su dispositivo Apple. Este proceso se llama _vinculación_.
+Esta guía le ayudará a _conectar_ su teclado Bluetooth Logi K380 a su dispositivo Apple.
 
-No necesita experiencia previa vinculando dispositivos Bluetooth.
+No necesita experiencia previa conectando dispositivos Bluetooth.
 
 Sólo necesita seguir este procedimiento una vez. La siguiente ocasión que encienda su teclado, éste se conectará automáticamente.
 
@@ -48,7 +48,7 @@ Sólo necesita seguir este procedimiento una vez. La siguiente ocasión que enci
 
 3. Su teclado está conectado, ahora aparece en **Mis dispositivos**.
 
-   ![Teclado en Lista de Mis Dispositivos](/assets/images/logi-keyb/es-keyb-my-dev.png)
+   ![Teclado en Lista de Mis dispositivos](/assets/images/logi-keyb/es-keyb-my-dev.png)
 
 
-NOTA: Su dispositivo Apple recordará y se conectará a su teclado K380 automáticamente cuando ambos estén encendidos. Si después decide que quiere _desconectar y olvidar_ su teclado, necesitará seguir el [procedimiento para desvincular]({{ '/projects/disconnect-logi-k380-es.html' | relative_url }}).
+NOTA: Su dispositivo Apple recordará y se conectará a su teclado K380 automáticamente cuando ambos estén encendidos. Si después decide que quiere _desconectar y olvidar_ su teclado, necesitará seguir el [procedimiento de desconexión]({{ '/projects/disconnect-logi-k380-es.html' | relative_url }}).

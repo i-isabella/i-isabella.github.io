@@ -12,7 +12,7 @@ You will only need to follow this procedure once. Next time you turn on your key
 
 ### On your Mac or iPad
 
-1. Go to **System Settings** (gear icon).
+1. Go to **System Settings** / **Settings** (gear icon).
    
    ![Apple System Settings Icon](/assets/images/logi-keyb/apple-sys-settings.png)
    

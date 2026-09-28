@@ -18,9 +18,9 @@ Si necesita usar su teclado después, necesitará seguir el [proceso de vinculac
    
    ![Menú Bluetooth de Apple](/assets/images/logi-keyb/es-bt-menu.png)
    
-3. Asegúrese que **Bluetooth** esté Encendido.
+3. Asegúrese que **Bluetooth** esté encendido.
    
-   ![Bluetooth Encendido](/assets/images/logi-keyb/es-bt-on.png)
+   ![Bluetooth encendido](/assets/images/logi-keyb/es-bt-on.png)
    
 4. Presione el símbolo ⓘ que se encuentra a la derecha de **Keyboard K380** en la lista de **Mis dispositivos**.
 

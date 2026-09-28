@@ -4,9 +4,9 @@ title: How to Connect the Logitech K380 Keyboard to a Mac or iPad
 ---
 # How to Connect the Logitech K380 Keyboard to a Mac or iPad
 
-This guide will help you _connect_ your Logi K380 Bluetooth keyboard to your Apple device. This process is called _pairing_. 
+This guide will help you _connect_ your Logi K380 Bluetooth keyboard to your Apple device.
 
-You don’t need previous experience pairing Bluetooth devices. 
+You don’t need previous experience connecting Bluetooth devices. 
 
 You will only need to follow this procedure once. Next time you turn on your keyboard, it will connect automatically. 
 
@@ -51,4 +51,4 @@ You will only need to follow this procedure once. Next time you turn on your key
    ![Keyboard on My Devices List](/assets/images/logi-keyb/keyb-my-dev.png)
 
 
-NOTE: Your Apple device will remember and reconnect to your K380 keyboard automatically when both of them are turned on. If you no longer want them to be linked, you will need to follow the [unparing procedure]({{ '/projects/disconnect-logi-k380.html' | relative_url }}) to _disconnect and forget_ your keyboard.
+NOTE: Your Apple device will remember and reconnect to your K380 keyboard automatically when both of them are turned on. If you no longer want them to be linked, you will need to follow the procedure to [_disconnect and forget_]({{ '/projects/disconnect-logi-k380.html' | relative_url }}) your keyboard.

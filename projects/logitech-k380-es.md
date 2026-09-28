@@ -12,17 +12,17 @@ Sólo necesita seguir este procedimiento una vez. La siguiente ocasión que enci
 
 ### En su Mac o iPad
 
-1. Abra **Configuración** (ícono de engranaje).
+1. Abra **Configuración del Sistema**/**Configuración** (ícono de engranaje).
    
-   ![Ícono de Configuración de Apple](/assets/images/logi-keyb/apple-sys-settings.png)
+   ![Ícono de Configuración de Apple](/assets/images/logi-keyb/es-apple-sys-settings.png)
    
 2. Seleccione el menú **Bluetooth**.
    
-   ![Menú Bluetooth de Apple](/assets/images/logi-keyb/bt-menu.png)
+   ![Menú Bluetooth de Apple](/assets/images/logi-keyb/es-bt-menu.png)
    
-3. Asegúrese que **Bluetooth** esté Encendido.
+3. Asegúrese que **Bluetooth** esté encendido.
    
-   ![Bluetooth Encendido](/assets/images/logi-keyb/bt-on.png)
+   ![Bluetooth encendido](/assets/images/logi-keyb/es-bt-on.png)
    
 ### En su teclado Logi K380
 
@@ -40,15 +40,15 @@ Sólo necesita seguir este procedimiento una vez. La siguiente ocasión que enci
 
 ### De nuevo en su Mac o iPad
 
-1. Su teclado aparecerá en la lista de **Dispositivos Cercanos** en el menú abierto de **Bluetooth**:
+1. Su teclado aparecerá en la lista de **Dispositivos cercanos** en el menú abierto de **Bluetooth**:
    
-   ![Lista de Dispositivos Cercanos](/assets/images/logi-keyb/keyb-nearby-dev.png)
+   ![Lista de Dispositivos Cercanos](/assets/images/logi-keyb/es-keyb-nearby-dev.png)
     
 2. Seleccione **Keyboard K380** y pulse el botón **Conectar**.
 
-3. Su teclado está conectado, ahora aparece en **Mis Dispositivos**.
+3. Su teclado está conectado, ahora aparece en **Mis dispositivos**.
 
-   ![Teclado en Lista de Mis Dispositivos](/assets/images/logi-keyb/keyb-my-dev.png)
+   ![Teclado en Lista de Mis Dispositivos](/assets/images/logi-keyb/es-keyb-my-dev.png)
 
 
 NOTA: Su dispositivo Apple recordará y se conectará a su teclado K380 automáticamente cuando ambos estén encendidos. Si después decide que quiere _desconectar y olvidar_ su teclado, necesitará seguir el [procedimiento para desvincular]({{ '/projects/disconnect-logi-k380-es.html' | relative_url }}).

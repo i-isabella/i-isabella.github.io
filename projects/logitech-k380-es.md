@@ -12,7 +12,7 @@ Sólo necesita seguir este procedimiento una vez. La siguiente ocasión que enci
 
 ### En su Mac o iPad
 
-1. Abra **Configuración del Sistema**/**Configuración** (ícono de engranaje).
+1. Abra **Configuración del Sistema** / **Configuración** (ícono de engranaje).
    
    ![Ícono de Configuración de Apple](/assets/images/logi-keyb/es-apple-sys-settings.png)
    
